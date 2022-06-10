@@ -16,11 +16,11 @@ Task description is saved in the root folder under the name "TaskDescription.pdf
 
 # To Install & Start the Application
 
-- git clone [repo]
-- cd address_book_FE_test
-- cd additude_address_book
-- npm install
-- npm run start
+1. git clone [repo]
+2. cd address_book_FE_test
+3. cd additude_address_book
+4. npm install
+5. npm run start
 
 # Improvements to be made
 
