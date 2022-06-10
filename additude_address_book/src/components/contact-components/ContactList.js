@@ -8,8 +8,6 @@ const ContactList = ({
 	contactList,
 	setFilteredList,
 }) => {
-	//constructed the filter function to filter contacts that matches the search query, arguments could be made
-	//to make it in another fashion, such as only showing contacts which strictly match the search query from start.
 	const filterBySearch = (e) => {
 		//assign input value
 		const query = e.target.value;
@@ -20,7 +18,8 @@ const ContactList = ({
 		updatedList = updatedList.filter(
 			(contact) =>
 				contact.name.first.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
-				contact.name.last.toLowerCase().indexOf(query.toLowerCase()) !== -1
+				contact.name.last.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
+				contact.phone.toLowerCase().indexOf(query.toLowerCase()) !== -1
 		);
 		// Trigger render with updated values
 		setFilteredList(updatedList);
