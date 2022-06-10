@@ -2,7 +2,7 @@
 
 Task description is saved in the root folder under the name "TaskDescription.pdf".
 
-2. fetching of data from the server will create different complexities depending on the size of the company. If the company is around 500 people
+1. fetching of data from the server will create different complexities depending on the size of the company. If the company is around 500 people
    then it might be best to fetch all of the data when the page loads as to create a seamless experience for the user when they search as the results
    will render almost instantly.
    Should the company for example be 5000+ people then we need to take into account how expensive the fetching operation is , considering the users
@@ -11,7 +11,7 @@ Task description is saved in the root folder under the name "TaskDescription.pdf
 
    in my task I've assumed a medium sized company of 200 employees and therefor I will load all of the contacts when the user enters the application.
 
-3. Reviewing the API it's clear that the contact information available should be limited and filtered as to not mistakenly share
+2. Reviewing the API it's clear that the contact information available should be limited and filtered as to not mistakenly share
    sensitive information i.e personal and/or authentication information.
 
 # To Start the Application
