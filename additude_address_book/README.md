@@ -14,8 +14,9 @@ Task description is saved in the root folder under the name "TaskDescription.pdf
 2. Reviewing the API it's clear that the contact information available should be limited and filtered as to not mistakenly share
    sensitive information i.e personal and/or authentication information.
 
-# To Start the Application
+# To Install & Start the Application
 
+- git clone [repo]
 - cd address_book_FE_test
 - cd additude_address_book
 - npm install
