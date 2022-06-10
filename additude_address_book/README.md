@@ -14,26 +14,11 @@ Task description is saved in the root folder under the name "TaskDescription.pdf
    could be accessing the app through their phones and in connection with that using their cellular bandwitdh. In this case it could be worth looking
    into a dynamic fetch based on the users input and also caching-methods to further optimize the data usage.
 
-   Judging from the task description it seems that the company size is either small or medium due to the fact that:
-   a. the CEO is the one ordering the job
-   b. the CEO has taken it on to himself to create a design mock up
+   in my task I've assumed a medium sized company of 200 employees and therefor I will load all of the contacts when the user enters the application.
 
-   As it's not safe to assume the company size based only on above information , I will check with the sales rep. regarding the client company size.
-   Work can continue while awating this information as it's a matter of extending the functionalty of the fetching function, should it be required.
-
-3. Sorting of the contact list could follow the logic on #1 , or be added functionalty as per the buttons in #1 as well e.g pressing a button to
-   sort the contact list based on the first name, last name or email etc.
-
-4. Reviewing the API it's clear that the contact information available should be limited and filtered as to not mistakenly share
+3. Reviewing the API it's clear that the contact information available should be limited and filtered as to not mistakenly share
    sensitive information i.e personal and/or authentication information.
 
-5. Design proposal has been recieved by the CEO , however other ideas and implementations have been suggested to be acceptable. Considering that the application
-   will be used on several different platforms it opens up the possibility that contact cards can differ in geometry dependning on the screen size e.g smaller list item
-   for phones/tables and bigger for desktop screens.
+# To Start the Application
 
-   examples:
-
-   - for bigger screens:
-     ![alt text](https://www.behance.net/gallery/66677473/Day-590-Users-List-UI-Design/modules/390086483)
-   - for smaller screens:
-     as per task description
+npm run start

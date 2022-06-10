@@ -1,5 +1,5 @@
 import ContactCard from "./ContactCard";
-import React, { useState } from "react";
+import React from "react";
 
 const ContactList = ({
 	setContact,
@@ -8,8 +8,6 @@ const ContactList = ({
 	contactList,
 	setFilteredList,
 }) => {
-	const [filter, setFilter] = useState();
-
 	//constructed the filter function to filter contacts that matches the search query, arguments could be made
 	//to make it in another fashion, such as only showing contacts which strictly match the search query from start.
 	const filterBySearch = (e) => {
@@ -18,9 +16,11 @@ const ContactList = ({
 		// Create copy of contactList
 		let updatedList = [...contactList];
 		// Include all elements which includes the search query
+		// check if match is made on either first name or last name
 		updatedList = updatedList.filter(
 			(contact) =>
-				contact.name.first.toLowerCase().indexOf(query.toLowerCase()) !== -1
+				contact.name.first.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
+				contact.name.last.toLowerCase().indexOf(query.toLowerCase()) !== -1
 		);
 		// Trigger render with updated values
 		setFilteredList(updatedList);
@@ -30,13 +30,13 @@ const ContactList = ({
 		<div
 			style={{
 				display: "flex",
-				justifyContent: "center",
 				flexDirection: "column",
+				minHeight: "100vh",
 			}}
 		>
 			<input
 				type='text'
-				placeholder={`filters by ${filter}`}
+				placeholder={`filters by name`}
 				onChange={filterBySearch}
 				style={{
 					width: "59%",
@@ -49,38 +49,32 @@ const ContactList = ({
 					maxWidth: "500px",
 				}}
 			></input>
+			{/*map through and render the filtered list of contacts */}
 			<ul style={{ listStyleType: "none", padding: "0" }}>
-				{
-					//TODO: Remove unecessary firstname,lastname etc and just use contact}
-					filteredList ? (
-						filteredList.map((contact, index) => (
-							<ContactCard
-								contact={contact}
-								setContact={setContact}
-								setShowList={setShowList}
-								firstName={contact.name.first}
-								lastName={contact.name.last}
-								picture={contact.picture.medium}
-								email={contact.email}
-								phone={contact.phone}
-								key={index}
-							/>
-						))
-					) : (
-						<div
-							className='loading'
-							style={{
-								testAlign: "center",
-								display: "flex",
-								justifyContent: "center",
-								fontSize: "2rem",
-								marginTop: "2rem",
-							}}
-						>
-							{"Loading..."}
-						</div>
-					)
-				}
+				{filteredList ? (
+					filteredList.map((contact, index) => (
+						<ContactCard
+							contact={contact}
+							setContact={setContact}
+							setShowList={setShowList}
+							key={index}
+						/>
+					))
+				) : (
+					<div
+						className='loading'
+						style={{
+							testAlign: "center",
+							display: "flex",
+							justifyContent: "center",
+							fontSize: "3rem",
+							marginTop: "15rem",
+							height: "100vh",
+						}}
+					>
+						{"Loading..."}
+					</div>
+				)}
 			</ul>
 		</div>
 	);

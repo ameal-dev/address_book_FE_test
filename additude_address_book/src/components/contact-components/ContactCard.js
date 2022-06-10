@@ -1,15 +1,6 @@
 import React from "react";
 
-function ContactCard({
-	firstName,
-	lastName,
-	picture,
-	email,
-	phone,
-	setContact,
-	contact,
-	setShowList,
-}) {
+function ContactCard({ setContact, contact, setShowList }) {
 	const mb = "10px";
 	const mt = "10px";
 
@@ -50,7 +41,11 @@ function ContactCard({
 							marginLeft: "20px",
 						}}
 					>
-						<img src={picture} alt='contact' style={{ borderRadius: "50%" }} />
+						<img
+							src={contact.picture.medium}
+							alt='contact'
+							style={{ borderRadius: "50%" }}
+						/>
 					</div>
 					<div
 						className='info-wrapper'
@@ -72,7 +67,7 @@ function ContactCard({
 							alt='name'
 							title='name'
 						>
-							{`${firstName} ${lastName}`}
+							{`${contact.name.first} ${contact.name.last}`}
 						</div>
 						<div
 							className='email'
@@ -84,7 +79,7 @@ function ContactCard({
 							}}
 							title='email'
 						>
-							{email}
+							{contact.email}
 						</div>
 						<div
 							className='telephone'
@@ -97,7 +92,7 @@ function ContactCard({
 							alt='telephone'
 							title='telephone number'
 						>
-							{phone}
+							{contact.phone}
 						</div>
 					</div>
 				</div>

@@ -1,6 +1,6 @@
-import ContactList from "./components/ContactList";
+import ContactList from "./components/contact-components/ContactList";
 import { useState, useEffect } from "react";
-import ContactPage from "./components/ContactPage";
+import ContactPage from "./components/contact-components/ContactPage";
 
 function App() {
 	const [filteredList, setFilteredList] = useState();
@@ -40,7 +40,8 @@ function App() {
 			<div
 				className='wrapper'
 				style={{
-					widht: "100%",
+					widht: "100vw",
+					height: "100%",
 					background:
 						"linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(193,193,193,1) 0%, rgba(182,232,201,1) 100%)",
 				}}
