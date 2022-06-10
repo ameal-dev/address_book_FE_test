@@ -22,3 +22,9 @@ Task description is saved in the root folder under the name "TaskDescription.pdf
 # To Start the Application
 
 npm run start
+
+# Improvements to be made
+
+- Pagination
+- Caching results
+- Dynamically showing results based on user credentials (HR, Customer Serice etc.)
