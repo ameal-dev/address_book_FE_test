@@ -22,7 +22,7 @@ function ContactPage({ contact, setShowList }) {
 					flexDirection: "column",
 					alignItems: "center",
 					width: "350px",
-					height: "650px",
+					height: "480px",
 					backgroundColor: "#1e293b",
 					color: "#c1c4ca",
 					borderRadius: "10px",

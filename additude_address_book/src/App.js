@@ -30,6 +30,9 @@ function App() {
 						}
 					})
 				);
+			})
+			.catch((error) => {
+				console.log("there was an error fetching", error);
 			});
 	}, []);
 

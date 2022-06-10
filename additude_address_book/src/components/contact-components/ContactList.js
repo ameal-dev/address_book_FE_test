@@ -15,12 +15,14 @@ const ContactList = ({
 		let updatedList = [...contactList];
 		// Include all elements which includes the search query
 		// check if match is made on either first name or last name
-		updatedList = updatedList.filter(
-			(contact) =>
-				contact.name.first.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
-				contact.name.last.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
+		updatedList = updatedList.filter((contact) => {
+			//combine firt and last name so that the search function understands whitespace
+			const name = `${contact.name.first} ${contact.name.last}`;
+			return (
+				name.toLowerCase().indexOf(query.toLowerCase()) !== -1 ||
 				contact.phone.toLowerCase().indexOf(query.toLowerCase()) !== -1
-		);
+			);
+		});
 		// Trigger render with updated values
 		setFilteredList(updatedList);
 	};
@@ -35,7 +37,7 @@ const ContactList = ({
 		>
 			<input
 				type='text'
-				placeholder={`filters by name`}
+				placeholder={`filters by name & phone number`}
 				onChange={filterBySearch}
 				style={{
 					width: "59%",
