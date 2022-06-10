@@ -21,6 +21,9 @@ Task description is saved in the root folder under the name "TaskDescription.pdf
 
 # To Start the Application
 
+cd address_book_FE_test
+cd additude_address_book
+npm install
 npm run start
 
 # Improvements to be made
