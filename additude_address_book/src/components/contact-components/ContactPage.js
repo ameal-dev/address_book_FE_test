@@ -2,8 +2,6 @@ import React from "react";
 import Information from "./Information";
 
 function ContactPage({ contact, setShowList }) {
-	console.log(contact);
-
 	return (
 		<div
 			className='wrapper'
