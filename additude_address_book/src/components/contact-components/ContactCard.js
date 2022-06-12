@@ -1,13 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 
 export const ContactCard = React.memo(
 	({ setContact, contact, setShowList }) => {
 		const mb = "10px";
 		const mt = "10px";
-
-		const refObj = useRef(0);
-		contact.name.first.charAt(0) === "A" && refObj.current++;
-		console.log(contact.name.first, refObj);
 
 		return (
 			<li>
