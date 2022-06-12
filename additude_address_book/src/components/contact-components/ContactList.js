@@ -1,4 +1,4 @@
-import ContactCard from "./ContactCard";
+import { ContactCard } from "./ContactCard";
 import React from "react";
 
 const ContactList = ({
